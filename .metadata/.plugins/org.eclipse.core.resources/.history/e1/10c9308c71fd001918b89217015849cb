@@ -1,0 +1,6 @@
+package example2;
+
+public interface AddressChecker {
+	AddressStatus CheckAddress(Address address);
+
+}

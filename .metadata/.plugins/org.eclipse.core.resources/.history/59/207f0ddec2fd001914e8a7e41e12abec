@@ -1,0 +1,93 @@
+package example2;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+
+class EqualityComparerUnitTest {
+
+	String street1= "street1";
+	String street2= "street2";
+	String city= "city";
+	String state= "state";
+	String zip= "zip";
+	Address address1;
+	Address address2;
+	
+	@BeforeEach
+	void Setup()
+	{
+		address1= new Address(street1, street2, city, state, zip);
+		address2= new Address(street1, street2, city, state, zip);
+	}
+
+	@Test
+	void EqualityComparer_NullAddress1_Guarded() {
+		AddressEqualityComparer sut = new AddressEqualityComparer();
+		
+		assertThrows(IllegalArgumentException.class, () -> {sut.Matches(null, new Address());});
+	}
+
+
+	@Test
+	void EqualityComparer_NullAddress2_Guarded() {
+		AddressEqualityComparer sut = new AddressEqualityComparer();
+		
+		assertThrows(IllegalArgumentException.class, () -> {sut.Matches(new Address(), null);});
+	}
+	
+	@ParameterizedTest
+	@CsvSource(
+			"street1 ,street2,city,state,zip,street1,street2,city,state,zip",
+			"street1,street2 ,city,state,zip,street1,street2,city,state,zip")
+	void EqualityComparer_StreetWithSpacePadding_Matches (
+			String addr1_street1,
+			String addr1_street2,
+			String addr1_city,
+			String addr1_state,
+			String addr1_zip,
+			String addr2_street1,
+			String addr2_street2,
+			String addr2_city,
+			String addr2_state,
+			String addr2_zip
+			)
+	{
+		Address addr1 = new Address(addr1_street1,  
+				                    addr1_street2,  
+				                    addr1_city,     
+				                    addr1_state,    
+				                    addr1_zip				); 
+		Address addr2 = new Address(addr2_street1,              
+				                    addr2_street2,              
+				                    addr2_city,                 
+				                    addr2_state,                
+				                    addr2_zip				);  
+		AddressEqualityComparer sut = new AddressEqualityComparer();
+		boolean equalityExpected = true;
+		
+		boolean equalityActual = sut.Matches(addr1, addr2);
+		
+		assertEquals(equalityActual, equalityExpected);
+	}
+	
+	
+	@Test
+	void EqualityComparer_SteetWithSpace_Matches()
+	{
+		
+		Address addr1 = new Address("1 abc  road", street2, city, state, zip); 
+		Address addr2 = new Address("1 abc road", street2, city, state, zip);
+		AddressEqualityComparer sut = new AddressEqualityComparer();
+		boolean equalityExpected = true;
+		
+		boolean equalityActual = sut.Matches(addr1, addr2);
+		
+		assertEquals(equalityActual, equalityExpected);
+	}
+	
+	
+}

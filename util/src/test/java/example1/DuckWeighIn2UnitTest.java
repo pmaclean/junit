@@ -1,0 +1,61 @@
+package example1;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+import example1.DuckWeighIn2;
+
+// Test Fixture for SummationMachine
+public class DuckWeighIn2UnitTest {
+
+	// requirement - sum n numbers, n>1
+	@Test
+	public void WeighIn_TwoNumbers_ReturnsSum()
+	{
+		DuckWeighIn2 sut = new DuckWeighIn2();
+		float[] values = new float[] { 1.5f, 3f, 2f };
+		float expectedTotal = 6.5f;
+		
+		float actualTotal = sut.Sum(values);
+		
+		Assertions.assertEquals(expectedTotal, actualTotal);
+	}
+	
+	// requirement - sum n numbers, n=0
+	@Test
+	public void WeighIn_NoNumbers_ReturnsZero() 
+	{
+		DuckWeighIn2 sut = new DuckWeighIn2();
+		float[] values = new float[] {  };
+		float expectedTotal = 0f;
+		
+		float actualTotal = sut.Sum(values);
+		
+		Assertions.assertEquals(expectedTotal, actualTotal);
+	}
+	
+	// requirement - sum n numbers, n=1
+	@Test
+	public void WeighIn_OneNumbers_ReturnsSum() 
+	{
+		DuckWeighIn2 sut = new DuckWeighIn2();
+		float[] values = new float[] { .6f };
+		float expectedTotal = .6f;
+		
+		float actualTotal = sut.Sum(values);
+		
+		Assertions.assertEquals(expectedTotal, actualTotal);
+	}
+	
+	// error handling - guard against null argument
+	@Test
+	public void WeighIn_NullValues_ThrowsGuardException() 
+	{
+		
+		DuckWeighIn2 sut = new DuckWeighIn2();
+		float[] values = null;
+		
+		Assertions.assertThrows(IllegalArgumentException.class, () -> { sut.Sum(values); });
+	}
+	
+}

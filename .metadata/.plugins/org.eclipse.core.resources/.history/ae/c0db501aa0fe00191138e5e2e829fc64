@@ -1,0 +1,19 @@
+package example2;
+
+public class NameMatcher04 {
+
+	NameRepo nicknamesLookup;
+	
+	NameMatcher04(NameRepo nicknamesLookup)
+	{
+		this.nicknamesLookup = nicknamesLookup;
+	}
+	
+	boolean Matches(String name1, String name2)
+	{
+		name1 = nicknamesLookup.duckNameToFormalName(name1);
+		name2 = nicknamesLookup.duckNameToFormalName(name2);
+		
+		return name1.strip().equalsIgnoreCase(name2.strip());
+	}
+}

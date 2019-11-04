@@ -1,0 +1,31 @@
+package example2;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+public class DuckHomeMatcherUnitTest01 {
+	
+	// Test whether two like homes match each other.
+	@Test
+	public void Matcher_TwoIdentical_ReturnsTrue()
+	{
+		NameMatcher0 sut = new NameMatcher0();
+		boolean expectedResult = true;
+		
+		boolean actualResult = sut.Matches("Kauka Lake", "Kauka Lake");
+		
+		Assertions.assertEquals(expectedResult, actualResult);
+	}
+	
+	@Test
+	public void Matcher_TwoCaseDifference_ReturnsTrue()
+	{
+		NameMatcher0 sut = new NameMatcher0();
+		boolean expectedResult = true;
+		
+		boolean actualResult = sut.Matches("Kauka Lake", "Kauka lake");
+		
+		Assertions.assertEquals(expectedResult, actualResult);
+	}
+
+}

@@ -1,0 +1,6 @@
+package example2;
+
+public interface MasterAddressRepo {
+	boolean IsValidStateAbbreviation(String abbreviation);
+	boolean IsValidZipCode(String abbreviation);
+}

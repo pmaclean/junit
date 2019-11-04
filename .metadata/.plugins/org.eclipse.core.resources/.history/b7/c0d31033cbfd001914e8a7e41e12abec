@@ -1,0 +1,23 @@
+package example2;
+
+public class DuckHome {
+	// Body of water where the duck lives - Walden Pond, North Park Lake, Golden Pond
+	public DuckHome(String location)
+	{
+		this.waterBody = location;
+	}
+	public String getLocation() {
+		return waterBody;
+	}
+	public void setLocation(String location) {
+		if (location==null) throw new IllegalArgumentException("Unexpected null pointer receive as argument named 'location'.");
+		this.waterBody = location;
+	}
+	private String waterBody;
+	
+	/*	
+	private String county;
+	private String state;
+	...
+	*/
+}

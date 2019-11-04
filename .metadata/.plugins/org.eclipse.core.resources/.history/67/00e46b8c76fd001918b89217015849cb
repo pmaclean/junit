@@ -1,0 +1,7 @@
+package example2;
+
+// Interface to check the mailable status of the address
+public interface AddressChecker {
+	AddressStatus CheckAddress(Address address);
+
+}

@@ -1,0 +1,6 @@
+package example2Stages;
+
+// Convert known nicknames to formal names 
+public interface NameRepo {
+	String duckNameToFormalName(String duckName);
+}

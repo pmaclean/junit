@@ -1,0 +1,56 @@
+package example2;
+
+public class Address {
+	public Address() 
+	{ 
+		this("","","","","");
+	}
+	public Address(String street1, String street2, String city, String state, String zip)
+	{
+		this.setStreet1(street1);
+		this.setStreet2(street2);
+		this.setCity(city);
+		this.setState(state);
+		this.setZip(zip);
+	}
+	public String getStreet1() {
+		return street1;
+	}
+	public void setStreet1(String street1) {
+		if (street1==null) throw new IllegalArgumentException("Unexpected null pointer receive as argument named 'street1'.");
+		this.street1 = street1;
+	}
+	public String getStreet2() {
+		return street2;
+	}
+	public void setStreet2(String street2) {
+		if (street2==null) throw new IllegalArgumentException("Unexpected null pointer receive as argument named 'street2'.");
+		this.street2 = street2;
+	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		if (city==null) throw new IllegalArgumentException("Unexpected null pointer receive as argument named 'city'.");
+		this.city = city;
+	}
+	public String getState() {
+		return state;
+	}
+	public void setState(String state) {
+		if (state==null) throw new IllegalArgumentException("Unexpected null pointer receive as argument named 'state'.");
+		this.state = state;
+	}
+	public String getZip() {
+		return zip;
+	}
+	public void setZip(String zip) {
+		if (zip==null) throw new IllegalArgumentException("Unexpected null pointer receive as argument named 'zip'.");
+		this.zip = zip;
+	}
+	private String street1;
+	private String street2;
+	private String city;
+	private String state;
+	private String zip;
+}

@@ -1,0 +1,16 @@
+package util;
+
+public class SummationMachine {
+
+	// Return the sum of all values in array of Float
+	public Float Sum(Float[] values)
+	{
+		if (values==null) throw new IllegalArgumentException("Unexpected null argument encountered.  Argument name was 'values'.");
+		Float accumulator = 0f;
+		for (int i=0; i<values.length; i++)
+		{
+			accumulator += values[i];
+		}
+		return accumulator;
+	}
+}

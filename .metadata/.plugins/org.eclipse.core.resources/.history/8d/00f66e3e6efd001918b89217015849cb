@@ -1,0 +1,26 @@
+package util;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+import math.SummationMachine;
+
+
+public class SummationMachineUnitTest1 {
+
+	@Test
+	public void SumDemo_TwoNumbers_ReturnsSum() 
+	{
+		SummationMachine sut = new SummationMachine();
+		Float[] values = new Float[] { 1.5f, 5f };
+		Float expectedTotal = 6.5f;
+		
+		Float actualTotal = sut.Sum(values);
+		
+		Assertions.assertEquals(expectedTotal, actualTotal);
+	}
+	
+}
+

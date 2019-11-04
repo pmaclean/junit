@@ -1,0 +1,41 @@
+package example2;
+
+import java.util.stream.Stream;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+
+/*
+ * DRY - Parameterized 
+ * 
+ */
+
+class DuckHomeMatcherUnitTest2 {
+	static Stream<Arguments> generateSameWaterPairings() {
+	    return Stream.of(
+	        Arguments.of("Mortons Lake","Mortons Lake"),
+	        Arguments.of("Mortons Lake","Mortons lake"),
+	        Arguments.of("Mortons Lake","Mortons Lake "),
+	        Arguments.of("Mortons Lake","Mortons  Lake"),
+	        Arguments.of("Mortons Lake","Mortons Laaaaak")
+	    );
+	}
+	
+	@ParameterizedTest
+	@MethodSource("generateSameWaterPairings")
+	public void Match_SpacingDifferenct_ReturnsTrue(String home1, String home2)
+	{
+		// Arrange
+		DuckHomeMatcher1 matcher = new DuckHomeMatcher1();
+		boolean expectedResult = true;
+
+		// Act
+		boolean actualResult = matcher.Matches(home1, home2);
+		
+		// Assert
+		Assertions.assertEquals(expectedResult, actualResult);
+	}
+}

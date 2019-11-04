@@ -1,0 +1,12 @@
+package example2;
+
+public class DuckHomeMatcherUnitTests {
+	
+	// Test whether two like homes match each other.
+	@Test
+	public void Matcher_TwoIdentical_ReturnsTrue()
+	{
+		
+	}
+
+}

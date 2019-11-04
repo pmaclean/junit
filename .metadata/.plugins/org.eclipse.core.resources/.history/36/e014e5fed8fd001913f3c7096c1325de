@@ -1,0 +1,39 @@
+package example2;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+class DuckHomeMatcherUnitTest1 {
+	@Test
+	public void Match_SameHomes_ReturnsTrue()
+	{
+		// Arrange
+		DuckHomeMatcher1 matcher = new DuckHomeMatcher1();
+		String home1= "Mortons Lake";
+		String home2= "Mortons Lake";
+		boolean expectedResult = true;
+
+		// Act
+		boolean actualResult = matcher.Matches(home1, home2);
+		
+		// Assert
+		Assertions.assertEquals(expectedResult, actualResult);
+	}
+
+	
+	@Test
+	public void Match_CaseDifference_ReturnsTrue()
+	{
+		// Arrange
+		DuckHomeMatcher1 matcher = new DuckHomeMatcher1();
+		String home1= "Mortons lake";
+		String home2= "Mortons Lake";
+		boolean expectedResult = true;
+
+		// Act
+		boolean actualResult = matcher.Matches(home1, home2);
+		
+		// Assert
+		Assertions.assertEquals(expectedResult, actualResult);
+	}
+}

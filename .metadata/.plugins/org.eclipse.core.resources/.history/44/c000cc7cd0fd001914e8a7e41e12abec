@@ -1,0 +1,19 @@
+package example2;
+
+public class DuckHomeMatcher {
+
+	public boolean Matches(String home1, String home2) {
+		if (home1==null) throw new IllegalArgumentException("Unexpected null parameter encountered with 'home1'.");
+		if (home2==null) throw new IllegalArgumentException("Unexpected null parameter encountered with 'home2'.");
+		
+		return Equals(home1, home2);
+	}
+	
+	private boolean Equals(String location1, String location2) {
+		StringJoiner sj = new StringJoiner(" ");
+		cannedLocation1 = location1.split("\s")
+		
+		return location1.trim().equalsIgnoreCase(location2.trim());	
+	}
+	
+}

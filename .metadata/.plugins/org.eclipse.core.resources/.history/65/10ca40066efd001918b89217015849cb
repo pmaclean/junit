@@ -1,0 +1,15 @@
+package util;
+
+import java.util.List;
+
+import util.MasterAddressRepo;
+
+public class AddressChecker {
+	protected MasterAddressRepo addressRepo;
+	public AddressChecker(MasterAddressRepo addressRepo)
+	{
+		if (addressRepo==null) throw new IllegalArgumentException("Unexpected null pointer encountered in argument 'addressRepo'.");
+		this.addressRepo = addressRepo;
+	}
+	List<String> Check(Address demo)
+}

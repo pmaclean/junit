@@ -1,0 +1,11 @@
+package example2;
+
+public class PeopleCompare {
+	bool Match(Person first, Person Second)
+	{
+		// match exact - name, exact - dob, exact - ssn
+		// match exact - name, M/d - dob, exact - ssn
+		// match exact - name, exact - dob, switched digits - ssn
+		
+	}
+}

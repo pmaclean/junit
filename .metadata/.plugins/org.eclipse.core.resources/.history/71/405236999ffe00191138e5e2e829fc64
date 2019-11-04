@@ -1,0 +1,6 @@
+package example2;
+
+// Convert known nicknames to formal names 
+public interface NicknamesRepo {
+	String nicknameToFormalName(String nickname);
+}

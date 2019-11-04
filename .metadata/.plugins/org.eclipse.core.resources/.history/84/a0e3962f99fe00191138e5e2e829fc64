@@ -1,0 +1,33 @@
+package example2;
+
+import java.util.StringJoiner;
+
+public class NameMatcher1 {
+
+	public boolean Matches(String name1, String name2) {
+		if (name1==null) throw new IllegalArgumentException("Unexpected null parameter encountered with 'home1'.");
+		if (name2==null) throw new IllegalArgumentException("Unexpected null parameter encountered with 'home2'.");
+		
+		return Equals(name1, name2);
+	}
+	
+	private boolean Equals(String location1, String location2) {
+		location1 = ReduceSpaces(location1);
+		location2 = ReduceSpaces(location2);
+
+		return location1.equalsIgnoreCase(location2);	
+	}
+
+	private String ReduceSpaces(String word) {
+		StringJoiner sj = new StringJoiner(" ");
+		String[] location1Words = word.split("\\s");
+		for (String w:location1Words) 
+		{
+			if (w.length()==0) continue;
+			sj.add(w);
+		}
+		word = sj.toString();
+		return word;
+	}
+	
+}

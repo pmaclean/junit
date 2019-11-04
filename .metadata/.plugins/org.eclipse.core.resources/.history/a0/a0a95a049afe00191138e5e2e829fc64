@@ -1,0 +1,31 @@
+package example2;
+
+import java.util.stream.Stream;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+
+public class NameMatcherUnitTest03 {
+	
+	static Stream<Arguments> getMatcherTestData() {
+		return Stream.of(
+				Arguments.of("Donald", "Donald", true),
+				Arguments.of("Daisy", "daisy", true)
+				);
+	}
+	
+	// Test whether two like homes match each other.
+	@ParameterizedTest
+	@MethodSource("getMatcherTestData")
+	public void Matcher_TwoIdentical_ReturnsTrue(String name1, String home2, boolean expectedResult)
+	{
+		NameMatcher0 sut = new NameMatcher0();
+		
+		boolean actualResult = sut.Matches("Kauka Lake", "Kauka Lake");
+		
+		Assertions.assertEquals(expectedResult, actualResult);
+	}
+	
+}

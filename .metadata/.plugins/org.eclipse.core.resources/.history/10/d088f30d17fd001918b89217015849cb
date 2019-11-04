@@ -1,0 +1,62 @@
+package util;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+public class SumDemoUnitTest2 {
+
+	// requirement - sum n numbers, n>1
+	@Test
+	public void SumDemo_TwoNumbers_ReturnsSum() 
+	{
+		SummationMachine sut = new SummationMachine();
+		Float[] values = new Float[] { 1.5f, 3f, 2f };
+		Float expectedTotal = 6.5f;
+		
+		Float actualTotal = sut.Sum(values);
+		
+		assertEquals(expectedTotal, actualTotal);
+	}
+	
+	// requirement - sum n numbers, n=0
+	@Test
+	public void SumDemo_NoNumbers_ReturnsZero() 
+	{
+		SummationMachine sut = new SummationMachine();
+		Float[] values = new Float[] {  };
+		Float expectedTotal = 0f;
+		
+		Float actualTotal = sut.Sum(values);
+		
+		assertEquals(expectedTotal, actualTotal);
+	}
+	
+	// requirement - sum n numbers, n=1
+	@Test
+	public void SumDemo_OneNumbers_ReturnsSum() 
+	{
+		SummationMachine sut = new SummationMachine();
+		Float[] values = new Float[] { .6f };
+		Float expectedTotal = .6f;
+		
+		Float actualTotal = sut.Sum(values);
+		
+		assertEquals(expectedTotal, actualTotal);
+	}
+
+	
+	// coverage - guard against null argument
+	@Test
+	public void SumDemo_NullValues_ThrowsGuardException() 
+	{
+		SummationMachine sut = new SummationMachine();
+		Float[] values = null;
+		Float expectedTotal = .6f;
+		
+		Float actualTotal = sut.Sum(values);
+		
+		assertEquals(expectedTotal, actualTotal);
+	}
+	
+}

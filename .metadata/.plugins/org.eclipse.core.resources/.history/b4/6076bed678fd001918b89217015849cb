@@ -1,0 +1,10 @@
+package example2;
+
+public class PeopleCompare {
+	bool Match(Person first, Person Second)
+	{
+		// match exact - name, exact - dob, exact - address
+		// match exact - name, exact - dob, similar - address
+		AddressSimilarity.Compare(address1, address2);
+	}
+}

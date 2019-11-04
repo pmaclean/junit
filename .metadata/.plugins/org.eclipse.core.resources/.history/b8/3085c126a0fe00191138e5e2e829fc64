@@ -1,0 +1,36 @@
+package example2;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+import example2Stages.NameMatcher01;
+
+public class NameMatcher_UnitTest01 {
+	
+	// Same names.
+	@Test
+	public void Matcher_TwoIdentical_ReturnsTrue()
+	{
+		NameMatcher01 sut = new NameMatcher01();
+		boolean expectedResult = true;
+		
+		boolean actualResult = sut.Matches("Donald", "Donald");
+		
+		Assertions.assertEquals(expectedResult, actualResult);
+	}
+	
+	// Case insensitive
+	@Test
+	public void Matcher_TwoCaseDifference_ReturnsTrue()
+	{
+		NameMatcher01 sut = new NameMatcher01();
+		boolean expectedResult = true;
+		
+		boolean actualResult = sut.Matches("Donald", "donald");
+		
+		Assertions.assertEquals(expectedResult, actualResult);
+	}
+	
+	
+
+}

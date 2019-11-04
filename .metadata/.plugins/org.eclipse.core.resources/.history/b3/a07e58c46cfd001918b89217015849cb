@@ -1,0 +1,7 @@
+package util;
+
+public interface PostalCodeRepo {
+	boolean IsValidStateAbbreviation(String abbreviation);
+	boolean IsValidZipCode(String abbreviation);
+	String ZipCodeToStateAbbreviation
+}

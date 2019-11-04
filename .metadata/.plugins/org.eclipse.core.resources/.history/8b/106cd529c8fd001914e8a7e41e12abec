@@ -1,0 +1,20 @@
+package example2;
+
+public class DuckHome {
+	public DuckHome() 
+	{ 
+		this("");
+	}
+	public DuckHome(String location)
+	{
+		this.location = location;
+	}
+	public String getLocation() {
+		return location;
+	}
+	public void setLocation(String location) {
+		if (location==null) throw new IllegalArgumentException("Unexpected null pointer receive as argument named 'location'.");
+		this.location = location;
+	}
+	private String location;
+}

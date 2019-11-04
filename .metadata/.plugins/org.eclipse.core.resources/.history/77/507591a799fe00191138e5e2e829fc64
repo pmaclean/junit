@@ -1,0 +1,20 @@
+package example2;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+public class DuckHomeMatcherUnitTest00 {
+	
+	// Test whether two like names match each other.
+	@Test
+	public void Matcher_TwoIdentical_ReturnsTrue()
+	{
+		NameMatcher0 sut = new NameMatcher0();
+		boolean expectedResult = true;
+		
+		boolean actualResult = sut.Matches("Donald", "Donald");
+		
+		Assertions.assertEquals(expectedResult, actualResult);
+	}
+
+}

@@ -1,0 +1,69 @@
+1572740022864	Delete element
+1572740511984	Delete element
+1572740517094	Delete element
+1572740994489	Extract method 'ReduceSpaces'
+1572741015216	Rename local variable 'location1'
+1572741212365	Rename local variable 'sj1'
+1572741962491	Delete element
+1572742620109	Copy compilation unit
+1572742629343	Rename type 'DuckHomeMatcher'
+1572742665074	Rename local variable 's'
+1572742681352	Rename type 'DuckHomeMatcherUnitTest'
+1572742728390	Copy compilation unit
+1572744303554	Rename type 'DuckWordRepo'
+1572797469351	Rename type 'DuckWeightIn1UnitTests'
+1572825678742	Rename type 'DuckHomeMatcherUnitTests'
+1572825925287	Rename type 'DuckHomeMatcherUnitTests0'
+1572826133629	Copy compilation unit
+1572826737332	Copy compilation unit
+1572826762736	Copy compilation unit
+1572826828501	Rename compilation unit 'DuckHomeMatcher.java'
+1572826869390	Rename type 'DuckHomeMatcher0'
+1572826904226	Rename type 'DuckHomeMatcher1'
+1572826935645	Rename local variable 'home1'
+1572826943171	Rename local variable 'home2'
+1572826960239	Rename local variable 'location1'
+1572826966784	Rename local variable 'location2'
+1572826985153	Rename type 'DuckHomeMatcher2'
+1572826999238	Rename local variable 'home1'
+1572827004745	Rename local variable 'home2'
+1572827020951	Rename local variable 'location1'
+1572827035278	Rename local variable 'location2'
+1572827150654	Rename type 'DuckHomeMatcherUnitTest00'
+1572827173695	Rename type 'DuckHomeMatcherUnitTest01'
+1572827272974	Rename type 'DuckHomeMatcherUnitTest0'
+1572827284972	Copy compilation unit
+1572827300872	Rename local variable 'home1'
+1572827306315	Rename local variable 'home2'
+1572827786464	Copy compilation unit
+1572827802200	Rename type 'NameMatcherUnitTest03'
+1572827807288	Rename type 'NameMatcherUnitTest04'
+1572827911434	Copy compilation unit
+1572827985450	Copy compilation unit
+1572828004699	Copy compilation unit
+1572828023158	Rename type 'NameMatcher02'
+1572828050789	Copy compilation unit
+1572828336225	Rename compilation unit 'DuckDialectRepo.java'
+1572829253824	Delete element
+1572829275485	Delete element
+1572829278394	Delete element
+1572829281717	Delete element
+1572829284719	Delete element
+1572829289082	Delete element
+1572829304368	Delete element
+1572829331521	Copy compilation unit
+1572829339906	Copy compilation unit
+1572829703557	Rename type 'NicknamesRepo'
+1572829720189	Rename method 'nicknameToFormalName'
+1572829742227	Rename type 'DuckNameToEnglishRepo'
+1572829759402	Rename local variable 'nickname'
+1572829764926	Rename local variable 'duckname'
+1572829786096	Rename type 'NameMatcherUnitTest00'
+1572829794322	Rename type 'NameMatcherUnitTest01'
+1572829803271	Rename type 'NameMatcherUnitTest02'
+1572829811058	Rename type 'NameMatcherUnitTest03'
+1572829816427	Rename type 'NameMatcherUnitTest04'
+1572829920408	Move compilation units
+1572829941045	Move compilation units
+1572829975702	Move compilation unit
+1572829980780	Copy compilation unit

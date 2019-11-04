@@ -1,0 +1,9 @@
+package example999;
+
+import example2.DuckHome;
+
+// Interface to check the mailable status of the address
+public interface AddressChecker {
+	AddressStatus CheckAddress(DuckHome address);
+
+}

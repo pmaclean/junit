@@ -1,0 +1,12 @@
+package util;
+
+import java.util.List;
+
+public class AddressChecker {
+	protected MasterAddressRepo addressRepo;
+	public AddressChecker(MasterAddressRepo addressRepo)
+	{
+		this.addressRepo = addressRepo;
+	}
+	List<String> Check(Address demo)
+}

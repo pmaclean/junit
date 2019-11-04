@@ -1,0 +1,10 @@
+package example2;
+
+public class PeopleCompare {
+
+	// matches vectors that should return true.
+	// match exact - name, exact - dob, exact ssn
+	// match exact - name, exact - dob, exact - address
+	// match exact - name, exact - dob, similar - address
+	
+}

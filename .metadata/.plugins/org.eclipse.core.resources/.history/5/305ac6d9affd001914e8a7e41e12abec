@@ -1,0 +1,80 @@
+package example1;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+import example1.SummationMachine1;
+
+// Test Fixture for SummationMachine
+public class SummationMachineUnitTest2 {
+
+	// requirement - sum n numbers, n>1
+	@Test
+	public void SumDemo_TwoNumbers_ReturnsSum()
+	{
+		SummationMachine2 sut = new SummationMachine2();
+		Float[] values = new Float[] { 1.5f, 3f, 2f };
+		Float expectedTotal = 6.5f;
+		
+		Float actualTotal = sut.Sum(values);
+		
+		Assertions.assertEquals(expectedTotal, actualTotal);
+	}
+	
+	// error handling - 
+	@Test
+	public void SumDemo_InputContainsNull_Throws()
+	{
+		
+	}
+	
+	// error handling - sum with null, throws
+	@Test
+	public void SumDemo_NullNumberPresent_Throws() 
+	{
+		SummationMachine2 sut = new SummationMachine2();
+		Float[] values = new Float[] { 1.5f, null, 2f };
+		Float expectedTotal = 6.5f;
+		
+		Assertions.assertThrows(NullPointerException.class, () -> { sut.Sum(values); });		
+	}
+		
+	
+	// requirement - sum n numbers, n=0
+	@Test
+	public void SumDemo_NoNumbers_ReturnsZero() 
+	{
+		SummationMachine2 sut = new SummationMachine2();
+		Float[] values = new Float[] {  };
+		Float expectedTotal = 0f;
+		
+		Float actualTotal = sut.Sum(values);
+		
+		Assertions.assertEquals(expectedTotal, actualTotal);
+	}
+	
+	// requirement - sum n numbers, n=1
+	@Test
+	public void SumDemo_OneNumbers_ReturnsSum() 
+	{
+		SummationMachine2 sut = new SummationMachine2();
+		Float[] values = new Float[] { .6f };
+		Float expectedTotal = .6f;
+		
+		Float actualTotal = sut.Sum(values);
+		
+		Assertions.assertEquals(expectedTotal, actualTotal);
+	}
+	
+	// error handling - guard against null argument
+	@Test
+	public void SumDemo_NullValues_ThrowsGuardException() 
+	{
+		
+		SummationMachine2 sut = new SummationMachine2();
+		Float[] values = null;
+		
+		Assertions.assertThrows(IllegalArgumentException.class, () -> { sut.Sum(values); });
+	}
+	
+}

@@ -1,0 +1,9 @@
+package example2;
+
+public class NameMatcher0 {
+
+	boolean Matches(String name1, String name2)
+	{
+		return name1.strip().equalsIgnoreCase(name2.strip());
+	}
+}

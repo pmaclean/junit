@@ -1,0 +1,9 @@
+package example999;
+
+public class Address {
+	public String streetLine1;
+	public String streetLine2;
+	public String city;
+	public String stateCode;
+	public String zipPlus5;
+}

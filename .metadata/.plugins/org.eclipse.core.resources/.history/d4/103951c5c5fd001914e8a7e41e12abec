@@ -1,0 +1,27 @@
+package example1;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+import example1.SummationMachine1;
+
+
+public class DocWeightIn1UnitTests {
+
+	@Test
+	public void SumDemo_TwoNumbers_ReturnsSum() 
+	{
+		// Arrange
+		DuckWeighIn1 sut = new DuckWeighIn1();
+		Float[] values = new Float[] { 1.5f, 5f };
+		Float expectedTotal = 6.5f;
+		
+		// Act
+		Float actualTotal = sut.Sum(values);
+		
+		// Assert
+		Assertions.assertEquals(expectedTotal, actualTotal);
+	}
+	
+}
+

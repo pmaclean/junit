@@ -1,0 +1,72 @@
+1572654633143	Rename compilation unit 'Sum.java'
+1572654822109	Rename compilation unit 'SumUtility.java'
+1572657616489	Rename compilation unit 'SumDemo.java'
+1572657646009	Rename compilation unit 'SummingMachine.java'
+1572659537906	Rename type 'SumDemoUnitTest'
+1572690870185	Rename type 'SumDemoUnitTest1'
+1572690877703	Rename type 'SumDemoUnitTest2'
+1572696965235	Rename compilation unit 'DemographicRepo.java'
+1572697872820	Rename compilation unit 'Demographic.java'
+1572697882001	Rename compilation unit 'DemographicChecker.java'
+1572697920435	Rename compilation unit 'PostalCodeRepo.java'
+1572698411644	Delete element
+1572698456065	Move compilation unit
+1572698460474	Move compilation unit
+1572698464561	Move compilation unit
+1572698543862	Rename package 'util'
+1572698554795	Rename package 'math'
+1572698561402	Rename package 'postal'
+1572698606273	Rename package 'util'
+1572698748144	Rename compilation unit 'AddressChecker.java'
+1572698764709	Rename compilation unit 'AddressChecker_Template.java'
+1572698811980	Move compilation unit
+1572698860917	Move compilation unit
+1572698865028	Delete element
+1572698904659	Delete element
+1572699361864	Rename type 'AddressIssue'
+1572702121562	Rename package 'example2'
+1572702657821	Rename compilation unit 'PeopleComparison.java'
+1572703226369	Move compilation unit
+1572703248025	Copy compilation unit
+1572703528873	Rename type 'UspsAddressSimilarity'
+1572703564694	Rename type 'UspsAddressComparer'
+1572703580308	Rename type 'AddressEqualityComparer'
+1572703615564	Rename type 'ExactEqualityComparer'
+1572704071816	Rename compilation unit 'AddressSimilarity.java'
+1572705067060	Rename type 'EqualityComparer'
+1572714658455	Encapsulate field 'street1'
+1572714668426	Encapsulate field 'street2'
+1572714674406	Encapsulate field 'city'
+1572714681905	Encapsulate field 'state'
+1572714688105	Encapsulate field 'zip'
+1572726528799	Copy compilation unit
+1572726537461	Rename type 'SummationMachine'
+1572726915374	Delete element
+1572729675801	Encapsulate field 'streetLine1'
+1572729683392	Encapsulate field 'city'
+1572729690190	Encapsulate field 'streetLine2'
+1572729774200	Encapsulate field 'state'
+1572729780683	Encapsulate field 'zip'
+1572735712324	Rename compilation unit 'SummationMachine1.java'
+1572735962615	Rename type 'SummationMachine2'
+1572736061919	Rename type 'SummationMachineUnitTest1'
+1572736099516	Rename type 'totalWeight1UnitTests'
+1572736296585	Rename type 'SummationMachineUnitTest2'
+1572736345491	Rename type 'DocWeightIn1UnitTests'
+1572736418311	Rename type 'Address'
+1572736609278	Rename field 'habitatName'
+1572736646788	Rename method 'getHabitatName'
+1572736659925	Rename method 'setHabitatName'
+1572736760661	Rename type 'AddressComparer'
+1572736852266	Rename type 'AddressEqualityComparer'
+1572736871824	Rename type 'DuckHabitatComparer'
+1572736881474	Rename type 'DuckHabitat'
+1572736907995	Rename local variable 'addr1'
+1572736914008	Rename local variable 'addr2'
+1572736979445	Rename local variable 'value2'
+1572737053974	Delete element
+1572738470141	Rename field 'location'
+1572738478855	Rename local variable 'location'
+1572738683583	Rename type 'DuckHomeEqualityComparer'
+1572738709989	Rename type 'DuckHomeComparer'
+1572738725288	Rename type 'EqualityComparerUnitTest'

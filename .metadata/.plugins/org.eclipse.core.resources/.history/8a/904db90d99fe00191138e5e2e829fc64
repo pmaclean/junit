@@ -1,0 +1,9 @@
+package example2;
+
+public class NameMatcher0 {
+
+	boolean Matches(String home1, String home2)
+	{
+		return home1.equalsIgnoreCase(home2);
+	}
+}

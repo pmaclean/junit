@@ -1,0 +1,16 @@
+package example2;
+
+import org.junit.Test;
+
+public class DuckHomeMatcherUnitTests0 {
+	
+	// Test whether two like homes match each other.
+	@Test
+	public void Matcher_TwoIdentical_ReturnsTrue()
+	{
+		DuckHomeMatcher sut = new DuckHomeMatcher();
+		
+		sut.Matches("Kauka Lake", "Kauka Lake";)
+	}
+
+}

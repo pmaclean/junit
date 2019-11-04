@@ -1,0 +1,75 @@
+package example2;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.stream.Stream;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.MethodSource;
+
+class DuckHomeMatcherUnitTest {
+	
+	@Test
+	public void Match_SameHomes_ReturnsTrue()
+	{
+		// Arrange
+		DuckHomeMatcher matcher = new DuckHomeMatcher();
+		String home1= "Mortons Lake";
+		String home2= "Mortons Lake";
+		boolean expectedResult = true;
+
+		// Act
+		boolean actualResult = matcher.Matches(home1, home2);
+		
+		// Assert
+		Assertions.assertEquals(expectedResult, actualResult);
+	}
+
+	
+	@Test
+	public void Match_CaseDifference_ReturnsTrue()
+	{
+		// Arrange
+		DuckHomeMatcher matcher = new DuckHomeMatcher();
+		String home1= "Mortons lake";
+		String home2= "Mortons Lake";
+		boolean expectedResult = true;
+
+		// Act
+		boolean actualResult = matcher.Matches(home1, home2);
+		
+		// Assert
+		Assertions.assertEquals(expectedResult, actualResult);
+	}
+	
+	static Stream<Arguments> generateSameLocationPairings() {
+	    return Stream.of(
+	        Arguments.of("Mortons Lake","Mortons Lake"),
+	        Arguments.of("Mortons Lake","Mortons lake"),
+	        Arguments.of("Mortons Lake","Mortons Lake ")
+	    );
+	}
+	
+	@ParameterizedTest
+	@MethodSource("generateSameLocationPairings")
+	public void Match_SpacingDifferenct_ReturnsTrue(String home1, String home2)
+	{
+		// Arrange
+		DuckHomeMatcher matcher = new DuckHomeMatcher();
+		DuckHome home1= new DuckHome("Mortons lake");
+		DuckHome home2= new DuckHome("Mortons Lake");
+
+		// Act
+		boolean actualResult = matcher.Matches(home1, home2);
+		
+		// Assert
+		Assertions.assertEquals(expectedResult, actualResult);
+		
+	
+	}
+}

@@ -1,0 +1,6 @@
+package example2;
+
+public class AddressStatus {
+	boolean IsGoodEnoughForUSPS;
+	List<String> KnownIssues;
+}

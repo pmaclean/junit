@@ -1,0 +1,20 @@
+package example2;
+
+public class DuckHabitat {
+	public DuckHabitat() 
+	{ 
+		this("");
+	}
+	public DuckHabitat(String habitatName)
+	{
+		this.setStreet1(habitatName);
+	}
+	public String getHabitatName() {
+		return street1;
+	}
+	public void setHabitatName(String habitatName) {
+		if (street1==null) throw new IllegalArgumentException("Unexpected null pointer receive as argument named 'street1'.");
+		this.street1 = street1;
+	}
+	private String habitatName;
+}

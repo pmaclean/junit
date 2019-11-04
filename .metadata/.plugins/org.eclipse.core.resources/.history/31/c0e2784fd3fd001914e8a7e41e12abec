@@ -1,0 +1,14 @@
+package example999;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class AddressStatus {
+	AddressStatus(boolean isGoodEnoughForUSPS, List<String> knownissues)
+	{
+		IsGoodEnoughForUSPS = isGoodEnoughForUSPS;
+		KnownIssues= knownissues;
+	}
+	boolean IsGoodEnoughForUSPS = true;
+	List<String> KnownIssues = new ArrayList<String>();
+}

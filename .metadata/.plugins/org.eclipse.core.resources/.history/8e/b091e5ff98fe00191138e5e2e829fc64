@@ -1,0 +1,20 @@
+package example2;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+public class DuckHomeMatcherUnitTest00 {
+	
+	// Test whether two like homes match each other.
+	@Test
+	public void Matcher_TwoIdentical_ReturnsTrue()
+	{
+		DuckHomeMatcher0 sut = new DuckHomeMatcher0();
+		boolean expectedResult = true;
+		
+		boolean actualResult = sut.Matches("Kauka Lake", "Kauka Lake");
+		
+		Assertions.assertEquals(expectedResult, actualResult);
+	}
+
+}

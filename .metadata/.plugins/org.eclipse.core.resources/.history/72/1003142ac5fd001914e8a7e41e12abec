@@ -1,0 +1,16 @@
+package example1;
+
+// Total the duck-weight for a duck team.  
+public class DuckWeighIn1 {
+
+	// Find the weights for all ducks
+	public Float Sum(Float[] duckWeights)
+	{
+		Float accumulator = 0f;
+		for (int i=0; i<duckWeights.length; i++)
+		{
+			accumulator += duckWeights[i];
+		}
+		return accumulator;
+	}
+}

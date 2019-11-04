@@ -1,0 +1,9 @@
+package example2;
+
+public class DuckHomeMatcher0 {
+
+	boolean Matches(String home1, String home2)
+	{
+		return false;
+	}
+}

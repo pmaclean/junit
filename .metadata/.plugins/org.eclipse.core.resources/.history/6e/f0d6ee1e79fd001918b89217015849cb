@@ -1,0 +1,20 @@
+package example999;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class AddressChecker1 implements AddressChecker {
+	protected MasterAddressRepo addressRepo;
+	public AddressChecker1(MasterAddressRepo addressRepo)
+	{
+		if (addressRepo==null) throw new IllegalArgumentException("Unexpected null pointer encountered in argument 'addressRepo'.");
+		this.addressRepo = addressRepo;
+	}
+
+	@Override
+	public AddressStatus CheckAddress(Address address) {
+		AddressStatus status = new AddressStatus();
+
+		if (address.streetLine1.length()==0 && address.streetLine2.length()==0)
+	}
+}

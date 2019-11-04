@@ -1,0 +1,38 @@
+package example2;
+
+import java.util.StringJoiner;
+
+public class DuckHomeMatcher {
+
+	public DuckHomeMatcher(AbbreviationRepository)
+	{	
+	}
+	public boolean Matches(String home1, String home2) {
+		if (home1==null) throw new IllegalArgumentException("Unexpected null parameter encountered with 'home1'.");
+		if (home2==null) throw new IllegalArgumentException("Unexpected null parameter encountered with 'home2'.");
+		
+		return Equals(home1, home2);
+	}
+	
+	private boolean Equals(String location1, String location2) {
+		location1 = ReduceSpaces(location1);
+		location2 = ReduceSpaces(location2);
+
+		return location1.equalsIgnoreCase(location2);	
+	}
+
+	private String ReduceSpaces(String word) {
+		StringJoiner sj = new StringJoiner(" ");
+		String[] location1Words = word.split("\\s");
+		for (String s:location1Words) 
+		{
+			if (s.length()!=0)
+			{
+				sj.add(s);
+			}
+		}
+		word = sj.toString();
+		return word;
+	}
+	
+}

@@ -1,0 +1,15 @@
+package example1;
+
+public class SummationMachine {
+
+	// Return the sum of all values in array of Float
+	public Float Sum(Float[] values)
+	{
+		Float accumulator = 0f;
+		for (int i=1; i<sizeof(values); i++)
+		{
+			accumulator += values[i];
+		}
+		return accumulator;
+	}
+}
